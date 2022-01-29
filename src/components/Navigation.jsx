@@ -216,7 +216,7 @@ export default function Navigation() {
               }
             >
               <div className="icon">
-              <i class='bx bx-chat'></i>
+              <i className='bx bx-chat'></i>
               </div>
               <div className="title">Chat</div>
             </Link>
