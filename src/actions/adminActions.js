@@ -11,8 +11,8 @@ import {
 
 } from '../constants/adminConstants';
 
-const URL = 'http://localhost:4000/api/v1'
-// const URL = 'https://rveapiv2.herokuapp.com/api/v1'
+// const URL = 'http://localhost:4000/api/v1'
+const URL = 'https://rveapiv2.herokuapp.com/api/v1'
 
 export const signin = (username, password) => async (dispatch) => {
     dispatch({ type: ADMIN_SIGNIN_REQUEST, payload: { username, password } });
