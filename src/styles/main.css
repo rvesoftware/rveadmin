@@ -48,7 +48,7 @@
     min-height: 100vh;
     max-height: 100vh;
     height: 100vh;
-    /* background: var(--second-bg-dark); */
+    background: var(--second-bg-dark);
   }
   
   button {

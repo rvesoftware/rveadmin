@@ -1679,3 +1679,41 @@
   }
   
 
+.str-chat__message-team-content p{
+  color: #f2f6fa !important;
+}
+
+time{
+  color: #f2f6fa !important;
+}
+
+.team-channel-header__container{
+  background-color: var(--second-bg-dark);
+}
+
+.team-channel-header__name{
+  color: #f2f6fa !important;
+}
+
+.team-channel-header__channel-wrapper svg{
+  filter: invert(1);
+}
+
+.str-chat__input-flat{
+  background-color: var(--second-bg-dark) !important;
+}
+
+.rta__textarea{
+  background-color: var(--second-bg-dark) !important;
+  color: #f2f6fa;
+  border: 1px solid rgba(255, 255, 255, 0.66) !important;
+}
+
+.str-chat__input-flat-emojiselect svg{
+  filter: invert(1) !important;
+}
+
+.str-chat__input-flat-fileupload svg{
+  filter: invert(1) !important;
+
+}
