@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-// import { toggle } from '../actions/generalActions';
+import { toggle } from '../actions/generalActions';
 import '../styles/navigation.css';
 // import { signout } from '../actions/userActions';
 
 export default function Navigation() {
-//   const userSignin = useSelector((state) => state.userSignin);
-//   const { userInfo } = userSignin;
+  const adminSignin = useSelector((state) => state.adminSignin);
+  const { adminInfo } = adminSignin;
 
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState('home');
@@ -16,7 +16,7 @@ export default function Navigation() {
 
   const setOpenMenu = () => {
     setIsOpen(!isOpen);
-    // dispatch(toggle(isOpen));
+    dispatch(toggle(isOpen));
   };
 
   const signoutHandler = () => {
@@ -36,14 +36,14 @@ export default function Navigation() {
         </button>
       </div>
 
-      {/* <div className="navigation__profile">
+      <div className="navigation__profile">
         <div className="photo">
-          <img src={userInfo.image} alt="" />
+          <img src={adminInfo.image} alt="" />
         </div>
         <div className="name">
-          <span>{userInfo.name}</span>
+          <span>{adminInfo.name}</span>
         </div>
-      </div> */}
+      </div>
 
       <div className="navigation__items">
         <details>

@@ -10,14 +10,14 @@ export default function Header() {
     const toggle = useSelector((state) => state.toggle);
     const { isOpen } = toggle;
 
-    // const userSignin = useSelector((state) => state.userSignin);
-    // const { userInfo } = userSignin;
+    console.log(isOpen)
+    const adminSignin = useSelector((state) => state.adminSignin);
+    const { adminInfo } = adminSignin;
 
     const dispatch = useDispatch();
 
     const setOpenThemeMenu = () => {
         setIsOpenThemeMenuTwo(!isOpenThemeMenuTwo);
-        console.log(isOpenThemeMenuTwo)
         // dispatch(toggleThemeMenu(true));
     }
 
@@ -32,9 +32,9 @@ export default function Header() {
             <li className="user__options" onClick={() => setOpenThemeMenu()}>
                 <i className='bx bx-palette'></i>
             </li>
-            {/* <li className="user__details"><span className="user__img">
-                <img src={userInfo.image} alt="" />
-            </span> {userInfo.name}</li> */}
+            <li className="user__details"><span className="user__img">
+                <img src={adminInfo.image} alt="" />
+            </span> {adminInfo.name}</li>
         </ul>
     </header>
 );

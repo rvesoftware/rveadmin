@@ -201,3 +201,12 @@ aside {
     }
   }
   
+
+  @media screen and (max-width:500px){
+     
+  .menu__collapse {
+    width: 0px;
+    left: 0;
+    transition: 0.5s;
+  }
+  }

@@ -1,22 +1,26 @@
 .screen {
-    position: relative;
+    position: fixed;
     width: calc(100% - 200px);
     left: 200px;
-    padding: 0 1rem;
     transition: 0.5s;
-    padding-bottom: 7.5rem;
-    top: 40px;
+    /* padding-bottom: 7.5rem; */
+    top: 50px;
     /* margin: 1rem; */
-    padding: 0.5rem 2rem;
+    /* padding: 0.5rem 2rem; */
+    /* padding:0 .5rem; */
     border-radius: 1rem;
     color: var(--txt-color-dark);
-    overflow: hidden;
+    /* overflow: hidden; */
+    height: calc(100vh - 50px);
   }
   
   .screen.active {
     width: calc(100% - 35px);
     left: 35px;
-    height: 100vh;
+    height: calc(100vh - 50px);
+
+
+    /* height: calc(100% - 50px); */
     
   }
   
@@ -50,3 +54,15 @@
     height: 35px;
     width: 100px;
   }
+
+
+  @media screen and (max-width:500px){
+     
+    .screen.active {
+      width: 100%;
+      left: 0;
+    
+    
+    }
+    
+    }

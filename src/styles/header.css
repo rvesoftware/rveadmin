@@ -13,6 +13,7 @@
     padding: 3rem 1.5rem;
     z-index: 999;
     transition: 0.5s;
+    /* background-color: #f2f2f2; */
   }
   
   .header.active {
@@ -48,3 +49,16 @@
     background-color: transparent;
     color: var(--txt-color-dark);
   }
+
+
+  @media screen and (max-width:500px){
+     
+    .header.active {
+      width: 100%;
+      left: 0;
+    }
+
+    .header {
+      padding: 1rem .5rem;
+    }
+    }
