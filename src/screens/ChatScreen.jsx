@@ -23,6 +23,7 @@ export default function ChatScreen() {
         fullName: adminInfo.name,
         id: adminInfo.userId,
         phoneNumber: adminInfo.phone,
+        image: adminInfo.image
       },
       adminInfo.token
     );
