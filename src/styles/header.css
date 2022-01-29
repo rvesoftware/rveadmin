@@ -1,0 +1,50 @@
+.header {
+    color: var(--just-white);
+    position: fixed;
+    top: 0;
+    left: 200px;
+    height: 50px;
+    width: calc(100% - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--txt-color-dark);
+    font-size: 2.5rem;
+    padding: 3rem 1.5rem;
+    z-index: 999;
+    transition: 0.5s;
+  }
+  
+  .header.active {
+    width: calc(100% - 35px);
+    left: 35px;
+  }
+  
+  .left__items {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .user__details {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .user__details .user__img img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .user__options {
+    cursor: pointer;
+  }
+  
+  .btn-icon {
+    font-size: 2.5rem;
+    background-color: transparent;
+    color: var(--txt-color-dark);
+  }

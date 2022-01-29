@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-snap-type: none;
+    scroll-behavior: smooth;
+  }
+
+  #root{
+    height: 100vh;
+    max-height:100vh;
+  }
+  
+  ::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 5px;
+    height: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  ::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--main-bg-dark);
+    border-radius: 4px;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+    background: var(--second-bg-dark);
+  }
+  
+  button {
+    cursor: pointer;
+    border: 0;
+    outline: o;
+    color: var(--txt-color);
+  }
+  
+  a {
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  img {
+    width: 100%;
+  }
+  
+  input {
+    border: 2px solid transparent;
+    outline: 0;
+  }
+  
+  input:focus {
+    border: 2px solid transparent;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  tr {
+    transition: 0.3s;
+  }
+  th {
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  td {
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+  }
+  
+  .footer__buttons .btn {
+    padding: 10px 30px;
+  }
+  
+  .footer__buttons .btn:first-child {
+    margin-right: 20px;
+  }
+  
+  .home__title {
+    line-height: 15px;
+  }
+  .home__subtitle {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+  
+  .overflow{
+    overflow: scroll;
+    max-height: 100vh;
+  }

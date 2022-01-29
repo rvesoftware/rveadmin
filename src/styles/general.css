@@ -1,0 +1,356 @@
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .loading__container {
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--main-bg-dark);
+    border-radius: 50px;
+    border-bottom: 1px solid transparent;
+    transform: 1s;
+    animation: loading 0.5s linear infinite;
+  }
+  
+  .loading__container.white {
+    border: 1px solid var(--main-bg-light);
+  }
+  
+  .product__image {
+    width: 50px;
+  }
+  
+  .display-none {
+    display: none;
+  }
+  @keyframes loading {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .alert {
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  .alert-danger {
+    color: #f2f6fa;
+    background-color: var(--main-color-red);
+  }
+  
+  .flex {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+  }
+  
+  .check__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .ball {
+    height: 30px;
+    width: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .check {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    left: 5px;
+    transition: 0.3s;
+  }
+  
+  .check-left {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50px;
+    transform: translateX(20px);
+    /* right: 5px; */
+    transition: 0.3s;
+  }
+  
+  .products {
+    margin-top: 20px;
+  }
+  
+  .products table th {
+    font-size: 1.4rem;
+  }
+  
+  .products table td {
+    padding: 0;
+  }
+  
+  textarea {
+    width: 100%;
+    resize: none;
+    padding: 1rem;
+  }
+  
+  .notes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .total {
+    font-size: 30px;
+    color: var(--main-color);
+  }
+  
+  .btn {
+    background-color: var(--main-color);
+    padding: 5px;
+    border-radius: 5px;
+    color: #f2f6fa;
+  }
+  
+  .table__container {
+  }
+  
+  .table-header {
+    background-color: var(--main-bg-dark);
+  }
+  
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mini-title {
+  }
+  
+  .mini-data {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.4rem;
+  }
+  
+  .data-array {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin-bottom: 40px;
+  }
+  
+  .data-array .title {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  
+  .data-array .title h2 {
+    padding: 2rem;
+    font-size: 1.6rem;
+  }
+  
+  .data-array .content {
+    padding: 2rem;
+  }
+  
+  .data-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+  }
+  
+  .max-width {
+    width: 300px;
+    max-width: 300px;
+  }
+  
+  .data-footer h2 {
+    margin-right: 10px;
+  }
+  .start {
+    align-items: flex-start;
+  }
+  
+  .rigth {
+    /* text-align: right; */
+  }
+  
+  .mt-2 {
+    margin-top: 20px;
+  }
+  
+  .note {
+    text-align: justify;
+  }
+  
+  .data-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+  }
+  
+  .data-options button {
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem;
+    height: 35px;
+    background-color: var(--main-bg-dark);
+    border-radius: 0 0 5px 5px;
+    color: #f2f6fa;
+    transition: 1s;
+  }
+  
+  .data-options button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .data-email {
+    padding: 1rem;
+  }
+  
+  .data-email select {
+    width: 100%;
+    outline: none;
+    height: 30px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: #f2f6fa;
+    border-radius: 5px;
+  }
+  
+  .data-email button {
+    margin-top: 10px;
+    padding: 1rem;
+    font-size: 1.6rem;
+  }
+  
+  .flex-center {
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .max-wid {
+    margin: 0 auto;
+    width: 600px;
+  }
+  
+  .table-row {
+    border-bottom: rgba(255, 255, 255, 0.5);
+  }
+  
+  .navigation__item.active {
+    color: var(--main-color);
+  }
+  
+  .form-group-icon {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .form-group {
+    padding: 0.8rem;
+  }
+  
+  .form-group.wid {
+    max-width: 300px;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    border-radius: 5px;
+    color: #f2f6fa;
+    margin-bottom: 2rem;
+    margin-right: 20px;
+  }
+  
+  .form-group.wid select {
+    border: none;
+    background-color: transparent;
+    border-radius: 5px;
+    color: #f2f6fa;
+  }
+  
+  .form-group .form-control {
+  }
+  .form-group-icon i {
+    margin-right: 10px;
+    font-size: 2.5rem;
+  }
+  
+  .form-group-icon .form-control {
+    border: none;
+    font-size: 1.6rem;
+    /* color: transparent; */
+  }
+  
+  .form-control {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    border-radius: 5px;
+    color: #f2f6fa;
+  }
+  
+  select option {
+    margin: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--main-bg-dark);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  }
+  
+  .clean__body-header {
+    display: flex;
+    /* align-items: center; */
+    justify-content: flex-end;
+  }
+  
+  .notes {
+    padding: 20px;
+  }
+  
+  .notes label {
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+  }
+  
+  .p-20 {
+    padding: 0 20px;
+  }
+  
+  .computer {
+    padding: 20px;
+  }
+  
+  .pft {
+    position: absolute;
+    left: -1000000;
+    top: -1000000000;
+    z-index: -1000;
+  }
+  
+  .App {
+    z-index: 10;
+  }

@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout";
+import { useSelector } from "react-redux";
+import Auth from "./components/Auth";
+import ChatScreen from "./screens/ChatScreen";
 
 function App() {
+  const adminSignin = useSelector((state) => state.adminSignin);
+  const { adminInfo } = adminSignin;
+
+  console.log(adminInfo)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <>
+        {adminInfo ? (
+          <Layout>
+            <Routes>
+            <Route path="/" element={<ChatScreen />} exact></Route>
+            </Routes>
+
+          </Layout>
+        ) : (
+          <Routes>
+            <Route path="/" element={<Auth />} exact></Route>
+          </Routes>
+        )}
+      </>
+    </BrowserRouter>
   );
 }
 
