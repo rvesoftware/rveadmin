@@ -17,7 +17,7 @@ function App() {
         {adminInfo ? (
           <Layout>
             <Routes>
-            <Route path="/" element={<ChatScreen />} exact></Route>
+            <Route path="/chat" element={<ChatScreen />} exact></Route>
             </Routes>
 
           </Layout>
