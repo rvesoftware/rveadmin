@@ -12,8 +12,8 @@ import {
 
 } from '../constants/hardwarePostConstants';
 
-const URL = 'http://localhost:4200/api/v1'
-// const URL = 'https://rveapiv2.herokuapp.com/api/v1'
+// const URL = 'http://localhost:4200/api/v1'
+const URL = 'https://rveapiv2.herokuapp.com/api/v1'
 
 export const listHardwarePosts = () => async (dispatch, getState) => {
   dispatch({ type: HARDWARE_POST_LIST_REQUEST });

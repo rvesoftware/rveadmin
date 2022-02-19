@@ -11,8 +11,8 @@ import {
 
 } from '../constants/notesConstants';
 
-const URL = 'http://localhost:4200/api/v1'
-// const URL = 'https://rveapiv2.herokuapp.com/api/v1'
+// const URL = 'http://localhost:4200/api/v1'
+const URL = 'https://rveapiv2.herokuapp.com/api/v1'
 
 export const createNote = () => async (dispatch) => {
     dispatch({ type: NOTE_CREATE_REQUEST });
