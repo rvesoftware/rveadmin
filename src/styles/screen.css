@@ -3,10 +3,10 @@
     width: calc(100% - 200px);
     left: 200px;
     transition: 0.5s;
-    /* padding-bottom: 7.5rem; */
+    padding-bottom: 7.5rem;
     top: 50px;
     /* margin: 1rem; */
-    /* padding: 0.5rem 2rem; */
+    padding: 0.5rem 2rem;
     /* padding:0 .5rem; */
     border-radius: 1rem;
     color: var(--txt-color-dark);

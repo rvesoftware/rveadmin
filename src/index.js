@@ -5,7 +5,7 @@ import './styles/main.css'
 import './styles/general.css'
 import './styles/signin.css'
 import './styles/screen.css'
-
+import './styles/task.css'
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';

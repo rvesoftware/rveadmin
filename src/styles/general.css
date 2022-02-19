@@ -125,9 +125,10 @@
   
   .btn {
     background-color: var(--main-color);
-    padding: 5px;
-    border-radius: 5px;
+    padding: 1rem;
+    border-radius: .5rem;
     color: #f2f6fa;
+    font-size: 1.6rem;
   }
   
   .table__container {
@@ -354,3 +355,88 @@
   .App {
     z-index: 10;
   }
+
+
+  .home__title{
+    font-weight: 500;
+    margin-top: 1rem;
+    font-size: 2rem;
+  }
+
+  .home__subtitle{
+    font-size: 1.4rem;
+  }
+
+  .card{
+    background: var(--second-bg-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+    padding: 2rem;
+  }
+
+  .section__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+
+  .section__header > div{
+    display: flex;
+    gap: 2rem;
+  }
+
+  .section__header select, .btn-none{
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: var(--second-bg-dark);
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+    color: #f2f6fa;
+    font-size: 1.4rem;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .card__header{
+    padding-bottom: 2rem;
+  }
+
+  
+.card__header .input{
+  background-color: transparent;
+  color: #f2f6fa;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: .5rem;
+}
+
+.container__home{
+  margin-top: 3rem;
+  display: flex;
+  gap: 2rem;
+}
+
+footer{
+  color: #f2f6fa;
+  position: absolute;
+  bottom: 10px;
+  left: 210px;
+  font-size: 1.2rem;
+  transition: .5s;
+}
+
+.footer__active{
+  left: 50px;
+  transition: .5s;
+
+}
+
+
+.rta__textarea{
+  color: #f2f6fa !important;
+} 
+
+.str-chat__textarea__textarea{
+  color: #f2f6fa !important;
+}

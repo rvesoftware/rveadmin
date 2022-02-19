@@ -2,6 +2,9 @@ import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import { toggleMenu } from './reducers/generalReducer';
 import { adminSigninReducer } from './reducers/adminReducer.js';
+import { noteCreateReducer } from './reducers/notesReducer';
+import { hardwarePostListReducer } from './reducers/hardwarePostReducer';
+import { taskCreateReducer, taskListReducer, taskUpdateReducer } from './reducers/taskReducer';
 // import {
 //   categoryCreateReducer,
 //   categoryDeleteReducer,
@@ -56,6 +59,11 @@ const initialState = {
 const reducer = combineReducers({
     toggle: toggleMenu,
     adminSignin: adminSigninReducer,
+    noteCreate: noteCreateReducer,
+    hardwarePostList: hardwarePostListReducer,
+    taskList: taskListReducer,
+    taskCreate: taskCreateReducer,
+    taskUpdate: taskUpdateReducer,
     // categoryList: categoryListReducer,
     // categoryCreate: categoryCreateReducer,
     // categoryDelete: categoryDeleteReducer,

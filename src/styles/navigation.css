@@ -6,7 +6,7 @@ aside {
     top: 0;
     left: 0;
     width: 250px;
-    background-color: var(--main-bg-dark);
+    background-color: var(--second-bg-dark);
     overflow: hidden;
     transition: 0.5s;
     box-shadow: var(--box-shadow-dark);

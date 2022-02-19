@@ -1,0 +1,37 @@
+.task__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;   
+}
+
+.task__card{
+    position: relative;
+    background-color: var(--second-bg-dark);
+    width: 300px;
+    min-height: 90vh;
+    max-height: 90vh;
+    padding: 1rem;
+    border-radius: .5rem;
+    /* overflow: scroll; */
+}
+
+.task__card-title{
+    background-color: var(--second-bg-dark);
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+    width: 90%;
+}
+
+.card__item:first-child{
+    margin-top: 2rem;
+}
+
+.card__item{
+    border-radius: .5rem;
+    padding: 1rem;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 255, 0.03);
+    
+}

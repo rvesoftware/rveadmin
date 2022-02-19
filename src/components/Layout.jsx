@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import Footer from './Footer';
 import Header from './Header';
 import Navigation from './Navigation';
 
@@ -14,6 +15,7 @@ export default function Layout({children}) {
             <div className={isOpen? 'screen active' : 'screen'}>
                 {children}
             </div>
+            {/* <Footer /> */}
         </>
     );
 }

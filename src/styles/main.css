@@ -48,7 +48,7 @@
     min-height: 100vh;
     max-height: 100vh;
     height: 100vh;
-    background: var(--second-bg-dark);
+    background: var(--main-bg-dark);
   }
   
   button {
@@ -88,17 +88,18 @@
   tr {
     transition: 0.3s;
   }
+
   th {
     padding: 1rem;
     font-size: 1.2rem;
     text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   }
   
   td {
     padding: 1rem;
     font-size: 1.2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
   
   tr:hover {

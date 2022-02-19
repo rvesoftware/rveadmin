@@ -65,34 +65,6 @@ export default function Navigation() {
               </div>
               <div className="title">Home</div>
             </Link>
-            <Link
-              to="/post"
-              onClick={() => setActive('post')}
-              className={
-                active === 'post'
-                  ? 'navigation__item active'
-                  : 'navigation__item'
-              }
-            >
-              <div className="icon">
-              <i className='bx bxl-blogger'></i>
-              </div>
-              <div className="title">Posts</div>
-            </Link>
-            <Link
-              to="/createpost"
-              onClick={() => setActive('createPost')}
-              className={
-                active === 'createPost'
-                  ? 'navigation__item active'
-                  : 'navigation__item'
-              }
-            >
-              <div className="icon">
-              <i className='bx bxs-comment-add' ></i>
-              </div>
-              <div className="title">Create Post</div>
-            </Link>
           </div>
         </details>
         <details>
@@ -142,6 +114,34 @@ export default function Navigation() {
               </div>
               <div className="title">Computers</div>
             </Link>
+            <Link
+              to="/hardwarePosts"
+              onClick={() => setActive('post')}
+              className={
+                active === 'post'
+                  ? 'navigation__item active'
+                  : 'navigation__item'
+              }
+            >
+              <div className="icon">
+              <i className='bx bxl-blogger'></i>
+              </div>
+              <div className="title">Posts</div>
+            </Link>
+            <Link
+              to="/createpost"
+              onClick={() => setActive('createPost')}
+              className={
+                active === 'createPost'
+                  ? 'navigation__item active'
+                  : 'navigation__item'
+              }
+            >
+              <div className="icon">
+              <i className='bx bxs-comment-add' ></i>
+              </div>
+              <div className="title">Create Post</div>
+            </Link>
             <h3 className="navigation__subtitle">Quotation</h3>
             <Link
               to="/quotation"
@@ -188,10 +188,90 @@ export default function Navigation() {
           </div>
         </details>
         <details>
+          <summary className='navigation__subtitle'>SOFTWARE <i className="bx bx-down-arrow-alt"></i></summary>
+          <div>
+          <Link
+              to="/softwarePosts"
+              onClick={() => setActive('post')}
+              className={
+                active === 'post'
+                  ? 'navigation__item active'
+                  : 'navigation__item'
+              }
+            >
+              <div className="icon">
+              <i className='bx bxl-blogger'></i>
+              </div>
+              <div className="title">Posts</div>
+            </Link>
+            <Link
+              to="/createsoftwarepost"
+              onClick={() => setActive('createPost')}
+              className={
+                active === 'createPost'
+                  ? 'navigation__item active'
+                  : 'navigation__item'
+              }
+            >
+              <div className="icon">
+              <i className='bx bxs-comment-add' ></i>
+              </div>
+              <div className="title">Create Post</div>
+            </Link>
+          </div>
+        </details>
+        <details>
+          <summary className='navigation__subtitle'>GAMING <i className="bx bx-down-arrow-alt"></i></summary>
+          <div>
+          <Link
+              to="/softwarePosts"
+              onClick={() => setActive('tournaments')}
+              className={
+                active === 'tournaments'
+                  ? 'navigation__item active'
+                  : 'navigation__item'
+              }
+            >
+              <div className="icon">
+              <i class='bx bx-trophy'></i>
+              </div>
+              <div className="title">Tournaments</div>
+            </Link>
+            <Link
+              to="/createsoftwarepost"
+              onClick={() => setActive('createPost')}
+              className={
+                active === 'createPost'
+                  ? 'navigation__item active'
+                  : 'navigation__item'
+              }
+            >
+              <div className="icon">
+              <i className='bx bxs-comment-add' ></i>
+              </div>
+              <div className="title">Create Tournament</div>
+            </Link>
+          </div>
+        </details>
+        <details>
           <summary className="navigation__subtitle">
             ENTERPRISE <i className="bx bx-down-arrow-alt"></i>
           </summary>
           <div>
+          <Link
+              to="/notes"
+              onClick={() => setActive('notes')}
+              className={
+                active === 'notes'
+                  ? 'navigation__item active'
+                  : 'navigation__item'
+              }
+            >
+              <div className="icon">
+              <i class='bx bx-note' ></i>
+              </div>
+              <div className="title">Notes</div>
+            </Link>
             <Link
               to="/task"
               onClick={() => setActive('task')}
