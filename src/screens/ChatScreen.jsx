@@ -9,7 +9,7 @@ import { useSelector } from "react-redux";
 import "stream-chat-react/dist/css/index.css";
 
 export default function ChatScreen() {
-  const apiKey = "65jgd4bt2dau";
+  const apiKey = "pw6btk4aq5wt";
   const client = StreamChat.getInstance(apiKey);
 
   const adminSignin = useSelector((state) => state.adminSignin);
