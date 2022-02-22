@@ -374,6 +374,23 @@
     padding: 2rem;
   }
 
+  .list__users{
+    /* background-color: var(--second-bg-dark); */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: .5rem;
+    padding: 2rem;
+    max-width: 400px;
+  }
+
+  .item__user{
+    background-color: var(--second-bg-dark);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 70px;
+    border-radius: .5rem;
+    padding: 1rem;
+    max-width: 300px;
+  }
+
   .section__header{
     display: flex;
     align-items: center;
@@ -439,4 +456,49 @@ footer{
 
 .str-chat__textarea__textarea{
   color: #f2f6fa !important;
+}
+
+.list-users{
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: scroll;
+  height: 100vh; 
+  padding-bottom: 15rem;
+}
+
+.item__user{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  /* justify-content: space-between; */
+  position: relative;
+  cursor: pointer;
+}
+
+.item__user .img{
+  width: 40px;
+  overflow: hidden;
+  border-radius: 5rem;
+  object-fit: cover;
+  height: 40px;
+}
+.item__user img{
+  max-width: 100%;
+  width: 100%;
+}
+
+.item__user h2{
+  font-size: 1.4rem;
+}
+
+.item__user p{
+  font-size: 1.2rem;
+}
+
+.item__user span{
+  position: absolute;
+  right: 20px;
+  font-weight: 600;
+  font-size: 1.6rem;
 }

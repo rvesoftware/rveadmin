@@ -5,6 +5,7 @@ import { adminSigninReducer } from './reducers/adminReducer.js';
 import { noteCreateReducer } from './reducers/notesReducer';
 import { hardwarePostListReducer } from './reducers/hardwarePostReducer';
 import { taskCreateReducer, taskListReducer, taskUpdateReducer } from './reducers/taskReducer';
+import { userListReducer } from './reducers/userReducer';
 // import {
 //   categoryCreateReducer,
 //   categoryDeleteReducer,
@@ -64,6 +65,7 @@ const reducer = combineReducers({
     taskList: taskListReducer,
     taskCreate: taskCreateReducer,
     taskUpdate: taskUpdateReducer,
+    userList: userListReducer,
     // categoryList: categoryListReducer,
     // categoryCreate: categoryCreateReducer,
     // categoryDelete: categoryDeleteReducer,

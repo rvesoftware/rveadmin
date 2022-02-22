@@ -224,6 +224,20 @@ export default function Navigation() {
           <summary className='navigation__subtitle'>GAMING <i className="bx bx-down-arrow-alt"></i></summary>
           <div>
           <Link
+              to="/gamingusers"
+              onClick={() => setActive('gamingusers')}
+              className={
+                active === 'gamingusers'
+                  ? 'navigation__item active'
+                  : 'navigation__item'
+              }
+            >
+              <div className="icon">
+              <i class='bx bxs-user-badge'></i>
+              </div>
+              <div className="title">Users</div>
+            </Link>
+          <Link
               to="/softwarePosts"
               onClick={() => setActive('tournaments')}
               className={
