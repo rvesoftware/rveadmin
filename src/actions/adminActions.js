@@ -14,8 +14,8 @@ import {
 
 } from '../constants/adminConstants';
 
-const URL = 'http://localhost:4200/api/v1'
-// const URL = 'https://rveapiv2.herokuapp.com/api/v1'
+// const URL = 'http://localhost:4200/api/v1'
+const URL = 'https://rveapiv2.herokuapp.com/api/v1'
 
 export const listAdmins = () => async (dispatch, getState) => {
   dispatch({type: ADMIN_LIST_REQUEST});
