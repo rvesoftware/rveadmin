@@ -26,8 +26,8 @@ export default function NoteSidebar() {
     <div className='note__container'>
     <div className='note__sidebar'>
         <div className='sidebar__header'>
-            <h2><i class='bx bx-note' ></i> Notes</h2>
-            <button onClick={() => newNote()}> <i class='bx bx-plus' ></i>Add Note</button>
+            <h2><i className='bx bx-note' ></i> Notes</h2>
+            <button onClick={() => newNote()}> <i className='bx bx-plus' ></i>Add Note</button>
         </div>
         <p>1 note</p>
 

@@ -11,6 +11,7 @@ import ProductScreen from "./screens/ProductScreen";
 import PostScreen from "./screens/PostScreen";
 import TaskScreen from "./screens/TaskScreen";
 import GamingUsersScreen from "./screens/GamingUsersScreen";
+import CategoriesScreen from "./screens/CategoriesScreen";
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path="/chat" element={<ChatScreen />} exact></Route>
             <Route path="/hardwarePosts" element={<PostScreen />} exact></Route>
             <Route path="/gamingusers" element={<GamingUsersScreen />} exact></Route>
+            <Route path="/categories" element={<CategoriesScreen />} exact></Route>
             </Routes>
 
           </Layout>

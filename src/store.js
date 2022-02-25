@@ -1,11 +1,12 @@
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import { toggleMenu } from './reducers/generalReducer';
-import { adminSigninReducer } from './reducers/adminReducer.js';
+import { adminListReducer, adminSigninReducer } from './reducers/adminReducer.js';
 import { noteCreateReducer } from './reducers/notesReducer';
 import { hardwarePostListReducer } from './reducers/hardwarePostReducer';
 import { taskCreateReducer, taskListReducer, taskUpdateReducer } from './reducers/taskReducer';
 import { userListReducer } from './reducers/userReducer';
+import { categoryCreateReducer, categoryDeleteReducer, categoryListReducer } from './reducers/categoryReducer';
 // import {
 //   categoryCreateReducer,
 //   categoryDeleteReducer,
@@ -66,6 +67,10 @@ const reducer = combineReducers({
     taskCreate: taskCreateReducer,
     taskUpdate: taskUpdateReducer,
     userList: userListReducer,
+    adminList: adminListReducer,
+    categoryList: categoryListReducer,
+    categoryCreate: categoryCreateReducer,
+    categoryDelete: categoryDeleteReducer,
     // categoryList: categoryListReducer,
     // categoryCreate: categoryCreateReducer,
     // categoryDelete: categoryDeleteReducer,

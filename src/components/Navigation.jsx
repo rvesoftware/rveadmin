@@ -233,7 +233,7 @@ export default function Navigation() {
               }
             >
               <div className="icon">
-              <i class='bx bxs-user-badge'></i>
+              <i className='bx bxs-user-badge'></i>
               </div>
               <div className="title">Users</div>
             </Link>
@@ -247,7 +247,7 @@ export default function Navigation() {
               }
             >
               <div className="icon">
-              <i class='bx bx-trophy'></i>
+              <i className='bx bx-trophy'></i>
               </div>
               <div className="title">Tournaments</div>
             </Link>
@@ -282,7 +282,7 @@ export default function Navigation() {
               }
             >
               <div className="icon">
-              <i class='bx bx-note' ></i>
+              <i className='bx bx-note' ></i>
               </div>
               <div className="title">Notes</div>
             </Link>

@@ -14,7 +14,10 @@
     max-height: 90vh;
     padding: 1rem;
     border-radius: .5rem;
-    /* overflow: scroll; */
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    
 }
 
 .task__card-title{
@@ -25,13 +28,76 @@
     width: 90%;
 }
 
-.card__item:first-child{
-    margin-top: 2rem;
-}
+
 
 .card__item{
     border-radius: .5rem;
     padding: 1rem;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 255, 0.03);
-    
+    background-color: rgba(255, 255, 255, .03);
+    cursor: pointer;
+    z-index: 999;
 }
+
+.task__card{
+    padding-top: 5rem;
+    gap: 2rem;
+}
+
+.card__task-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .card__task-header .express{
+    background-color: tomato;
+    width: 40px;
+    height: 15px;
+    border-radius: .5rem;
+  }
+
+  .check__task{
+      border-radius: 5rem;
+      height: 20px;
+      width: 20px;
+      font-size: 2rem;
+      color: #f2f6fa;
+      background-color: var(--main-color);
+      z-index: 999999;
+  }
+
+  .check__task:hover{
+    background-color: orangered;
+  }
+
+  .task__item-title{
+      font-size: 1.3rem;
+  }
+
+  .task__item-description{
+      font-size: 1rem;
+  }
+
+  .item__date{
+      font-size: 1.3rem;
+      margin-top: 1rem;
+  }
+
+  .picture{
+      width: 30px;
+      height: 30px;
+      overflow: hidden;
+      border-radius: 5rem;
+      background-color: var(--second-bg-dark);
+      box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
+  }
+
+  .item__users{
+      display: flex;
+      gap: 1rem;
+      margin-top: 1rem;
+  }
+  .item__users .picture img{
+      width: 100%;
+  }

@@ -6,6 +6,8 @@ import './styles/general.css'
 import './styles/signin.css'
 import './styles/screen.css'
 import './styles/task.css'
+import './styles/modal.css'
+import './styles/input.css'
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
