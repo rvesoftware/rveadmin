@@ -1,12 +1,13 @@
 .note__sidebar{
     max-width: 300px;
-    padding: 1rem;
+    /* padding: 1rem; */
 }
 
 .sidebar__header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
 }
 
 .sidebar__header h2{

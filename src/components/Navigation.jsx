@@ -73,6 +73,35 @@ export default function Navigation() {
           </summary>
           <div>
             <Link
+              to="/hardwarePosts"
+              onClick={() => setActive('post')}
+              className={
+                active === 'post'
+                  ? 'navigation__item active'
+                  : 'navigation__item'
+              }
+            >
+              <div className="icon">
+              <i className='bx bxl-blogger'></i>
+              </div>
+              <div className="title">Posts</div>
+            </Link>
+            <Link
+              to="/createHardwarePost"
+              onClick={() => setActive('createHardwarePost')}
+              className={
+                active === 'createHardwarePost'
+                  ? 'navigation__item active'
+                  : 'navigation__item'
+              }
+            >
+              <div className="icon">
+              <i className='bx bxs-comment-add' ></i>
+              </div>
+              <div className="title">Create Post</div>
+            </Link>
+            <h3 className="navigation__subtitle">Product</h3>
+            <Link
               to="/categories"
               onClick={() => setActive('categories')}
               className={
@@ -113,34 +142,6 @@ export default function Navigation() {
                 <i className="bx bx-desktop"></i>
               </div>
               <div className="title">Computers</div>
-            </Link>
-            <Link
-              to="/hardwarePosts"
-              onClick={() => setActive('post')}
-              className={
-                active === 'post'
-                  ? 'navigation__item active'
-                  : 'navigation__item'
-              }
-            >
-              <div className="icon">
-              <i className='bx bxl-blogger'></i>
-              </div>
-              <div className="title">Posts</div>
-            </Link>
-            <Link
-              to="/createpost"
-              onClick={() => setActive('createPost')}
-              className={
-                active === 'createPost'
-                  ? 'navigation__item active'
-                  : 'navigation__item'
-              }
-            >
-              <div className="icon">
-              <i className='bx bxs-comment-add' ></i>
-              </div>
-              <div className="title">Create Post</div>
             </Link>
             <h3 className="navigation__subtitle">Quotation</h3>
             <Link
@@ -184,6 +185,13 @@ export default function Navigation() {
                 <i className="bx bx-list-ul"></i>
               </div>
               <div className="title">Sells</div>
+            </Link>
+            <h3 className="navigation__subtitle">Orders</h3>
+            <Link to="/orders" className="navigation__item">
+              <div className="icon">
+                <i className="bx bx-list-ul"></i>
+              </div>
+              <div className="title">Orders</div>
             </Link>
           </div>
         </details>

@@ -125,7 +125,7 @@ export default function TaskScreen() {
                     </div>
                     <div className="item__users">
                       {task.users.map((user) => (
-                        <div className="picture">
+                        <div key={user._id} className="picture">
                           <img src={user.img} alt={user.name} title={user.name} />
                         </div>
                       ))}
@@ -155,7 +155,7 @@ export default function TaskScreen() {
                     </div>
                     <div className="item__users">
                       {task.users.map((user) => (
-                        <div className="picture">
+                        <div key={user._id} className="picture">
                           <img src={user.img} alt={user.name} title={user.name} />
                         </div>
                       ))}
@@ -188,7 +188,7 @@ export default function TaskScreen() {
                     </div>
                     <div className="item__users">
                       {task.users.map((user) => (
-                        <div className="picture">
+                        <div key={user._id} className="picture">
                           <img src={user.img} alt={user.name} title={user.name} />
                         </div>
                       ))}
@@ -218,7 +218,7 @@ export default function TaskScreen() {
                     </div>
                     <div className="item__users">
                       {task.users.map((user) => (
-                        <div className="picture">
+                        <div key={user._id} className="picture">
                           <img src={user.img} alt={user.name} title={user.name} />
                         </div>
                       ))}
@@ -251,7 +251,7 @@ export default function TaskScreen() {
                     </div>
                     <div className="item__users">
                       {task.users.map((user) => (
-                        <div className="picture">
+                        <div key={user._id} className="picture">
                           <img src={user.img} alt={user.name} title={user.name} />
                         </div>
                       ))}
@@ -281,7 +281,7 @@ export default function TaskScreen() {
                     </div>
                     <div className="item__users">
                       {task.users.map((user) => (
-                        <div className="picture">
+                        <div key={user._id} className="picture">
                           <img src={user.img} alt={user.name} title={user.name} />
                         </div>
                       ))}
@@ -314,7 +314,7 @@ export default function TaskScreen() {
                     </div>
                     <div className="item__users">
                       {task.users.map((user) => (
-                        <div className="picture">
+                        <div key={user._id} className="picture">
                           <img src={user.img} alt={user.name} title={user.name} />
                         </div>
                       ))}
@@ -344,7 +344,7 @@ export default function TaskScreen() {
                     </div>
                     <div className="item__users">
                       {task.users.map((user) => (
-                        <div className="picture">
+                        <div key={user._id} className="picture">
                           <img src={user.img} alt={user.name} title={user.name} />
                         </div>
                       ))}
@@ -396,7 +396,7 @@ export default function TaskScreen() {
                   {loadingAdmin? (<h2>CARGANDO...</h2>) : (
                     <>
                   {admins.map((admin) => (
-                    <label htmlFor={admin.name} title={admin.name + " " + admin.lastname }>
+                    <label key={admin._id} htmlFor={admin.name} title={admin.name + " " + admin.lastname }>
                     <div className="picture">
                       <img src={admin.image} alt="" />
                     </div>
@@ -435,7 +435,7 @@ export default function TaskScreen() {
               <span>{timeago.format(taskSelected.createdAt)}</span>
               <div className="item__users mb">
                       {taskSelected.users? (taskSelected.users.map((user) => (
-                        <div className="picture">
+                        <div key={user._id} className="picture">
                           <img src={user.img} alt={user.name} title={user.name} />
                         </div>
                       ))) : (<h2>Nom</h2>)}

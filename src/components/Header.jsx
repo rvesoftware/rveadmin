@@ -10,7 +10,6 @@ export default function Header() {
     const toggle = useSelector((state) => state.toggle);
     const { isOpen } = toggle;
 
-    console.log(isOpen)
     const adminSignin = useSelector((state) => state.adminSignin);
     const { adminInfo } = adminSignin;
 

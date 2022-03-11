@@ -7,7 +7,7 @@ export default function TeamChannelPreview({setActiveChannel, setIsCreating, set
     
     const ChannelPreview = () => (
         <p className='channel-preview__item'>
-            # {channel?.data?.name || channel?.data?.id}    
+            <span className='cat'>#</span> {channel?.data?.name || channel?.data?.id}    
         </p>
     );
 
@@ -26,7 +26,14 @@ export default function TeamChannelPreview({setActiveChannel, setIsCreating, set
 
     return (
       <div className={channel?.id === activeChannel?.id ? 'channel-preview__wrapper__selected' : 'channel-preview__wrapper' } 
-        onClick={() => {console.log(channel)}}
+      onClick={() => {
+        setIsCreating(false);
+        setIsEditing(false);
+        setActiveChannel(channel);
+        if(setToggleContainer) {
+            setToggleContainer((prevState) => !prevState)
+        }
+    }}
       >
         {type === 'team' ? <ChannelPreview /> : <DirectPreview /> }
       </div>

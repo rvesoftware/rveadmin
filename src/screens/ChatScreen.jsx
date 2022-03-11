@@ -34,7 +34,7 @@ export default function ChatScreen() {
   const [isEditing, setIsEditing] = useState(false);
 
   return (
-    <div className="app__wrapper">
+    <div className="app__wrapper no-margin">
       <Chat client={client} theme="team light">
         <ChannelListContainer
           isCreating={isCreating}

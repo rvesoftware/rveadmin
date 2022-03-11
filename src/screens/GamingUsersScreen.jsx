@@ -23,7 +23,7 @@ export default function GamingUsersScreen() {
           <div className="section__header">
             <button className="btn">Add User</button>
             <div>
-            <button className="btn">{users.length}</button>
+              <button className="btn">{users.length}</button>
               <select name="" id="">
                 <option value="">FILTER</option>
               </select>
@@ -32,21 +32,23 @@ export default function GamingUsersScreen() {
             </div>
           </div>
 
-          <div className="list-users">
-            {users.map((user) => (
-              <div className="item__user">
-                <div className="img">
-                  <img src={user.photo} alt="" />
+          <div className="aside-list">
+            <div className="list-users">
+              {users.map((user) => (
+                <div className="item__user">
+                  <div className="img">
+                    <img src={user.photo} alt="" />
+                  </div>
+                  <div>
+                    <h2>
+                      {user.firstname} {user.lastname}
+                    </h2>
+                    <p>{user.username}</p>
+                  </div>
+                  <span>{user.points}</span>
                 </div>
-                <div>
-                  <h2>
-                    {user.firstname} {user.lastname}
-                  </h2>
-                  <p>{user.username}</p>
-                </div>
-                <span>{user.points}</span>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       )}

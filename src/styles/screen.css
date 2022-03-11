@@ -66,3 +66,31 @@
     }
     
     }
+
+    .max-wid{
+      width: 90px;
+      overflow: hidden;
+      height: 20px;
+      font-size: 1.4rem !important;
+    }
+
+    .time-order{
+      font-size: 1.2rem !important;
+    }
+
+    .section__header{}
+
+    .input-list{
+      width: 100%;
+      padding: 1rem;
+      border-radius: .5rem;
+      margin-bottom: 1rem;
+      background-color: transparent;
+      border: 1px solid rgba(255, 255, 255, .3);
+      color: #f2f2f2;
+      outline: none;
+    }
+
+    .aside-list{
+      max-width: 350px;
+    }

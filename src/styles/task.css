@@ -20,6 +20,14 @@
     
 }
 
+
+.task__card.home-task{
+    min-height: 400px;
+    width: 240px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
 .task__card-title{
     background-color: var(--second-bg-dark);
     position: absolute;

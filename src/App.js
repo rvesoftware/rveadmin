@@ -12,13 +12,14 @@ import PostScreen from "./screens/PostScreen";
 import TaskScreen from "./screens/TaskScreen";
 import GamingUsersScreen from "./screens/GamingUsersScreen";
 import CategoriesScreen from "./screens/CategoriesScreen";
+import OrdersScreen from "./screens/OrdersScreen";
+import CreateHardwarePostScreen from "./screens/CreateHardwarePostScreen";
 
 
 function App() {
   const adminSignin = useSelector((state) => state.adminSignin);
   const { adminInfo } = adminSignin;
 
-  console.log(adminInfo)
   return (
     <BrowserRouter>
       <>
@@ -27,12 +28,15 @@ function App() {
             <Routes>
             <Route path="/" element={<HomeScreen />} exact></Route>
             <Route path="/products" element={<ProductScreen />} exact></Route>
-            <Route path="/notes" element={<NoteScreen />} exact></Route>
+            <Route path="/notes" element={<NoteScreen />} ></Route>
+            <Route path="/notes/:id" element={<NoteScreen />} ></Route>
             <Route path="/task" element={<TaskScreen />} exact></Route>
             <Route path="/chat" element={<ChatScreen />} exact></Route>
             <Route path="/hardwarePosts" element={<PostScreen />} exact></Route>
+            <Route path="/createHardwarePost" element={<CreateHardwarePostScreen />} exact></Route>
             <Route path="/gamingusers" element={<GamingUsersScreen />} exact></Route>
             <Route path="/categories" element={<CategoriesScreen />} exact></Route>
+            <Route path="/orders" element={<OrdersScreen />} exact></Route>
             </Routes>
 
           </Layout>

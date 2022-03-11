@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { ChannelList, useChatContext } from 'stream-chat-react';
+import Cookies from 'universal-cookie';
 import { ChannelSearch, TeamChannelList, TeamChannelPreview} from './';
 
 const SideBar = () => (
@@ -33,8 +34,6 @@ const customChannelMessagingFilter = (channels) => {
 }
 
 
-
-
 const ChannelListContent = ({ isCreating, setIsCreating, setCreateType, setIsEditing, setToggleContainer }) => {
     const { client } = useChatContext();
 
@@ -44,7 +43,7 @@ const ChannelListContent = ({ isCreating, setIsCreating, setCreateType, setIsEdi
     return (
         <>
             <div className="channel-list__list__wrapper">
-                {/* <CompanyHeader /> */}
+                <CompanyHeader />
                 <ChannelSearch setToggleContainer={setToggleContainer} />
                 <ChannelList 
                     filters={filters}

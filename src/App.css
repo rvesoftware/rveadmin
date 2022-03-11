@@ -85,7 +85,7 @@
 }
 
 .channel-empty__first {
-  font-family: Helvetica Neue, sans-serif;
+  font-family: "Poppins" , sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 120%;
@@ -98,7 +98,7 @@
 }
 
 .channel-empty__second {
-  font-family: Helvetica Neue, sans-serif;
+  font-family: "Poppins" , sans-serif;
   font-size: 14px;
   line-height: 120%;
   margin: 0;
@@ -107,14 +107,16 @@
 
 .channel__container {
   height: calc(100% - 50px);
+  width: 100% !important;
 }
 
 .str-chat__thread {
   z-index: 1;
+  background-color: #2c2c30 !important;
 }
 
 .str-chat__thread-list .str-chat__message-team {
-  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  /* border-left: 1px solid rgba(0, 0, 0, 0.1); */
 }
 
 .str-chat__thread-list .str-chat__message-actions-list button:first-child {
@@ -148,7 +150,7 @@
 }
 
 .custom-thread-header__left-title {
-  font-family: Helvetica Neue, sans-serif;
+  font-family: "Poppins" , sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 22px;
@@ -157,7 +159,7 @@
 }
 
 .custom-thread-header__left-count {
-  font-family: Helvetica Neue, sans-serif;
+  font-family: "Poppins" , sans-serif;
   font-size: 14px;
   color: #858688;
 }
@@ -186,7 +188,7 @@
 .channel-list__sidebar {
   width: 72px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    var(--primary-color);
+  #2F3136;
   box-shadow: 1px 0px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -207,12 +209,12 @@
 .channel-list__list__wrapper {
   display: flex;
   flex-direction: column;
-  background: var(--primary-color);
+  background: #2F3136;
   width: 240px;
 }
 
 .icon1__inner {
-  font-family: Helvetica Neue, sans-serif;
+  font-family: "Poppins" , sans-serif;
   height: 100%;
   display: flex;
   align-items: center;
@@ -235,7 +237,7 @@
   }
   
   .icon2__inner {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     height: 100%;
     display: flex;
     align-items: center;
@@ -243,16 +245,17 @@
   }
   
   .channel-list__header {
-    padding-left: 16px;
-    height: 62px;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    /* height: 62px; */
   }
   
   .channel-list__header__text {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
-    line-height: 28px;
+    /* line-height: 28px; */
     color: #ffffff;
   }
   
@@ -264,6 +267,7 @@
     padding-top: 16px;
     /* border-top: 1px solid #00000033; */
     /* margin: 2rem 0; */
+    display: none;
   }
   
   .channel-search__input__wrapper {
@@ -271,13 +275,12 @@
     justify-content: center;
     align-items: center;
     height: 40px;
-    background: rgba(255, 255, 255, 0.2);
+    /* background: rgba(255, 255, 255, 0.2); */
     /* border-radius: 8px; */
     margin-bottom: 8px;
     border: 1px solid transparent;
     width: 100%;
     padding: 2rem;
-    
   }
   
   .channel-search__input__wrapper:focus-within {
@@ -294,15 +297,19 @@
     background: none;
     border: none;
     color: #fff;
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 16px;
-    outline: none;
+    outline: none !important;
+    width: 100%;
+    display: none;
+    margin: 0;
   }
   
   ::placeholder {
     color: rgba(255, 255, 255, 0.66);
-    white-space: nowrap;
+    /* white-space: nowrap; */
     width: 100%;
+
   }
   
   .channel-search__results {
@@ -323,7 +330,7 @@
     width: fit-content;
     display: flex;
     align-items: center;
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
@@ -372,7 +379,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-weight: bold;
     font-size: 14px;
     line-height: 120%;
@@ -381,7 +388,7 @@
   
   .channel-search__result-text {
     width: 100%;
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-weight: 500;
     font-size: 14px;
     line-height: 120%;
@@ -404,7 +411,7 @@
   }
   
   .create-channel__header p {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
@@ -425,7 +432,7 @@
   }
   
   .channel-name-input__wrapper p {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-size: 16px;
     line-height: 120%;
     color: #2c2c30;
@@ -433,13 +440,14 @@
   }
   
   .channel-name-input__wrapper input {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-size: 18px;
-    color: rgba(0, 0, 0, 0.5);
+    color: #f2f6fa !important;
     height: 50px;
-    width: 540px;
-    background: #f7f6f8;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 98% !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+    border: none !important;
+    
     box-sizing: border-box;
     border-radius: 8px;
     padding-left: 16px;
@@ -468,7 +476,7 @@
   
   .create-channel__button-wrapper p {
     background: var(--primary-color);
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-weight: bold;
     font-size: 18px;
     padding: 10px 20px;
@@ -491,7 +499,7 @@
   }
   
   .user-list__header p {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-size: 14px;
     line-height: 17px;
     color: #858688;
@@ -509,7 +517,7 @@
   }
   
   .user-list__message {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-size: 16px;
     color: #2c2c30;
     margin: 20px;
@@ -523,7 +531,7 @@
   }
   
   .user-item__wrapper:hover {
-    background: #f7f6f8;
+    background: rgba(0, 0, 0, 0.1);
     cursor: pointer;
   }
   
@@ -535,7 +543,7 @@
   }
   
   .user-item__wrapper p {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-size: 14px;
     line-height: 17px;
     color: #2c2c30;
@@ -544,6 +552,7 @@
   
   .user-item__name {
     font-weight: 500;
+    color: #f2f6fa !important;
   }
   
   .user-item__last-active {
@@ -558,8 +567,8 @@
   .user-item__invite-empty {
     height: 28px;
     width: 28px;
-    background: #f7f6f8;
-    border: 1px solid #dedddf;
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
     border-radius: 14px;
     box-sizing: border-box;
     margin-left: 2px;
@@ -581,7 +590,7 @@
   }
   
   .edit-channel__header p {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-weight: bold;
     font-size: 18px;
     line-height: 22px;
@@ -602,7 +611,7 @@
   }
   
   .channel-name-input__wrapper p {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-size: 16px;
     line-height: 120%;
     color: #2c2c30;
@@ -610,7 +619,7 @@
   }
   
   .channel-name-input__wrapper input {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-size: 18px;
     color: rgba(0, 0, 0);
     height: 50px;
@@ -634,7 +643,7 @@
   
   .edit-channel__button-wrapper {
     height: 82px;
-    background: #f7f6f8;
+    background: rgba(0, 0, 0, 0.08);
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -643,7 +652,7 @@
   
   .edit-channel__button-wrapper p {
     background: var(--primary-color);
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-weight: bold;
     font-size: 18px;
     padding: 10px 20px;
@@ -655,15 +664,16 @@
   
   .team-channel-header__container {
     position: relative;
-    height: 62px;
+    height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
     background: #ffffff;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
-    border-top-right-radius: 16px;
+    /* border-top-right-radius: 16px; */
     z-index: 1;
+    width: 100%;
   }
   
   .team-channel-header__channel-wrapper {
@@ -676,7 +686,7 @@
   }
   
   .team-channel-header__name {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-weight: bold;
     font-size: 18px;
     color: #2c2c30;
@@ -743,7 +753,7 @@
   }
   
   .team-channel-header__right-text {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-size: 14px;
     color: #858688;
   }
@@ -752,6 +762,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-top: 2rem;
   }
   
   .team-channel-list__message {
@@ -764,10 +775,12 @@
   }
   
   .team-channel-list__header {
-    padding: 0 16px;
+    padding: 0 1.4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
+    font-family: "Poppins", sans-serif;
   }
   
   .team-channel-list__header svg {
@@ -775,12 +788,13 @@
   }
   
   .team-channel-list__header__title {
-    font-family: Helvetica Neue, sans-serif;
-    font-size: 13px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1rem;
     line-height: 16px;
     height: 16px;
     color: rgba(255, 255, 255, 0.66);
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    text-transform: uppercase;
   }
   
   .channel-preview__wrapper {
@@ -814,7 +828,7 @@
   .channel-preview__item {
     display: flex;
     align-items: center;
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 14px;
     color: #ffffff;
     padding: 0px 20px;
@@ -856,7 +870,7 @@
   }
   
   .str-chat__message-team:hover {
-    background: #e9e9ea;
+    background: rgba(0, 0, 0, 0.1);
   }
   
   .str-chat__message-team-group {
@@ -866,11 +880,11 @@
   }
   
   .str-chat__message-team-content p {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-style: normal;
     font-weight: normal;
     line-height: 120%;
-    color: #000000;
+    color: #f2f6fa;
     margin: 0;
     background: none;
   }
@@ -895,7 +909,7 @@
   .str-chat__message-team-meta time {
     visibility: visible;
     z-index: 2;
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 10px;
@@ -904,14 +918,14 @@
   }
   
   .str-chat__message-team-author strong {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 11px;
+    font-weight: 600;
+    font-size: 1.3rem;
     line-height: 120%;
-    color: #858688;
+    color: #4169e1;
     margin: 0;
-    margin-right: 8px;
+    /* margin-right: 8px; */
   }
   
   .str-chat__message-team-content--text {
@@ -926,7 +940,7 @@
     z-index: 2;
     display: flex;
     /* justify-content: flex-end; */
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
@@ -943,8 +957,8 @@
   }
   
   .str-chat__date-separator-date {
-    color: #858688;
-    font-family: Helvetica Neue, sans-serif;
+    color: #f2f6fa !important;
+    font-family: "Poppins" , sans-serif;
     font-style: normal;
     font-weight: normal;
   }
@@ -1004,7 +1018,7 @@
   }
   
   .str-chat__simple-reactions-list-item--last-number {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 11px;
@@ -1074,7 +1088,7 @@
   .str-chat__edit-message-form .str-chat__message-team-form-footer button {
     cursor: pointer;
     color: rgba(0, 0, 0, 0.33);
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-size: 14px;
   }
   
@@ -1120,7 +1134,7 @@
   }
   
   .str-chat__message-team-pin-indicator div div {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-size: 10px !important;
     line-height: 120%;
     color: #858688;
@@ -1192,7 +1206,7 @@
   }
   
   .team-message-input__wrapper .giphy-icon__text {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 11px;
@@ -1226,7 +1240,7 @@
     background: #fff;
     border: none;
     outline: none;
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 15px;
@@ -1323,7 +1337,7 @@
   }
   
   .rta__list-header {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-size: 14px;
     line-height: 16px;
     color: #2c2c30;
@@ -1332,7 +1346,7 @@
   }
   
   .str-chat__thread {
-    background: #fff;
+    /* background: #2c2c30; */
     box-shadow: inset 1px 0px 0px rgba(0, 0, 0, 0.1);
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
@@ -1350,7 +1364,7 @@
   }
   
   .str-chat__thread-header-details strong {
-    font-family: Helvetica, sans-serif;
+    font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
@@ -1360,7 +1374,7 @@
   }
   
   .str-chat__thread-header-details small {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -1432,7 +1446,7 @@
   }
   
   .thread-message-input__wrapper .giphy-icon__text {
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 11px;
@@ -1475,7 +1489,7 @@
     background: #fff;
     border: none;
     outline: none;
-    font-family: Helvetica Neue, sans-serif;
+    font-family: "Poppins" , sans-serif;
     font-size: 15px;
     line-height: 10px;
   }
@@ -1561,7 +1575,10 @@
     bottom: 0;
     right: 0;
     /* display: none; */
-    width: calc(100% - 250px) !important;
+    width: calc(100% - 240px) !important;
+    /* margin: 0 10px; */
+    background-color: transparent !important;
+    
   }
   
   .str-chat__ul:last-child{
@@ -1700,13 +1717,15 @@ time{
 }
 
 .str-chat__input-flat{
-  background-color: var(--second-bg-dark) !important;
+  background-color: transparent !important;
 }
 
 .rta__textarea{
-  background-color: var(--second-bg-dark) !important;
+  /* background-color: var(--second-bg-dark) !important; */
   color: #f2f6fa;
-  border: 1px solid rgba(255, 255, 255, 0.66) !important;
+  /* border: 1px solid rgba(255, 255, 255, 0.66) !important; */
+  background-color: rgba(204, 204, 204, 0.1) !important;
+  outline: none !important;
 }
 
 .str-chat__input-flat-emojiselect svg{
@@ -1716,4 +1735,19 @@ time{
 .str-chat__input-flat-fileupload svg{
   filter: invert(1) !important;
 
+}
+
+.cat{
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.no-margin{
+  margin: -5px -20px;
+}
+
+.str-chat__message-team-status-number{
+  color: #f2f6fa !important;
+  font-size: 1.2rem !important;
+  margin-top: .5rem;
 }
