@@ -27,7 +27,6 @@ export const listUsers = () => async (dispatch, getState) => {
         dispatch({type: USER_LIST_FAIL, payload: error.message && error.response.data.message? error.response.data.message : error.message, });
     }
 }
-
 // export const createUser = (priority, title, description, users) => async(dispatch) => {
 //     dispatch({type: TASK_CREATE_REQUEST, payload: {priority, title, description, users}});
     
