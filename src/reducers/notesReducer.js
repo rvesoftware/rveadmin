@@ -45,7 +45,7 @@ export const noteCreateReducer = (state = {}, action) => {
 };
 
 export const noteUpdateReducer = (state = {draftNotes: []}, action) => {
-  // let draftNotes = [...state];
+  let draftNotes = [];
   switch (action.type) {
     case NOTE_UPDATE_REQUEST:
       return { loading: true };
