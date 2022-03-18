@@ -14,6 +14,8 @@ import GamingUsersScreen from "./screens/GamingUsersScreen";
 import CategoriesScreen from "./screens/CategoriesScreen";
 import OrdersScreen from "./screens/OrdersScreen";
 import CreateHardwarePostScreen from "./screens/CreateHardwarePostScreen";
+import ComputerScreen from "./screens/ComputerScreen";
+import QuotationScreen from "./screens/QuotationScreen";
 
 
 function App() {
@@ -37,6 +39,8 @@ function App() {
             <Route path="/gamingusers" element={<GamingUsersScreen />} exact></Route>
             <Route path="/categories" element={<CategoriesScreen />} exact></Route>
             <Route path="/orders" element={<OrdersScreen />} exact></Route>
+            <Route path="/computers" element={<ComputerScreen />} exact></Route>
+            <Route path="/quotation" element={<QuotationScreen />} exact></Route>
             </Routes>
 
           </Layout>

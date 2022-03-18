@@ -81,7 +81,7 @@ export default function HomeScreen() {
             <h2>{users.length}</h2>
             <p>Total Gaming Users</p>
             </span>
-            <i class='bx bxs-group'></i>
+            <i className='bx bxs-group'></i>
           </div>
         )}
               {loadingOrders ? (
@@ -92,7 +92,7 @@ export default function HomeScreen() {
             <h2>{orders.length}</h2>
             <p>Total Hardware Orders</p>
             </span>
-            <i class='bx bxs-package' ></i>
+            <i className='bx bxs-package' ></i>
           </div>
         )}
                {loadingPosts ? (
@@ -103,7 +103,7 @@ export default function HomeScreen() {
             <h2>{posts.length}</h2>
             <p>Total Hardware Posts</p>
             </span>
-            <i class='bx bxl-blogger'></i>
+            <i className='bx bxl-blogger'></i>
           </div>
         )}
         <div className="card"></div>

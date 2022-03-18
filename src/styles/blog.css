@@ -1,0 +1,16 @@
+.rdw-option-wrapper, .rdw-dropdown-wrapper{
+    border: none !important;
+    filter: invert(1);
+    z-index: 9999999999999 !important;
+}
+
+.public-DraftStyleDefault-block {
+    /* height: 500px !important; */
+    
+}
+
+
+.screen .public-DraftStyleDefault-block span span {
+    color: rgba(255, 255, 255, 1) !important;
+    filter: invert(1);
+}

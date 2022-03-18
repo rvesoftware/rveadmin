@@ -372,8 +372,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: .5rem;
     padding: 2rem;
+    height: 84vh;
+    overflow: scroll;
+    overflow-x: hidden;
   }
-
   .list__users{
     /* background-color: var(--second-bg-dark); */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -585,4 +587,81 @@ footer{
 
 .rdw-editor-main{
   height: 100vh;
+}
+
+.mr-2{
+  margin-right: 20px;
+}
+
+.list-over{
+  position: relative;
+  overflow: scroll;
+}
+
+
+.status-active{
+  position: relative;
+  display: block;
+
+  background-color: green;
+  min-height: 20px;
+  min-width: 50px;
+  cursor: pointer;
+  border-radius: .5rem;
+
+}
+
+
+.status-inactive{
+  position: relative;
+  display: block;
+  background-color: red;
+  min-height: 20px;
+  min-width: 50px;
+  border-radius: .5rem;
+  cursor: pointer;
+  padding: .5rem;
+  text-align: center;
+}
+
+.form-group input::placeholder{
+  
+  color: black;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+
+select.form-control{
+  border: none;
+  height: 10px;
+}
+
+
+.form-control{
+  height: 20px !important;
+  overflow: hidden;
+}
+
+textarea.form-control{
+  height: 200px Im !important;
+}
+
+.pb-50{
+  padding-bottom: 12rem;
+}
+
+.division{
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.division table{
+  width: 50%;
+}
+
+.form-control-text{
+  background-color: transparent;
+  color: #f2f6fa;
 }

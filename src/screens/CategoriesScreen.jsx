@@ -61,8 +61,6 @@ export default function CategoriesScreen(props) {
     dispatch(createCategory(name));
   };
 
-  console.log(openModal)
-
   return (
     <div>
       <div className="section__header">
@@ -103,7 +101,7 @@ export default function CategoriesScreen(props) {
                   category.name.toLowerCase().includes(search.toLowerCase())
                 )
                 .map((category, index) => (
-                  <tr key={category.id}>
+                  <tr key={category._id}>
                     <td>{index + 1}</td>
                     <td>{category.name.toUpperCase()}</td>
                     <td>{timeago.format(category.createdAt)}</td>

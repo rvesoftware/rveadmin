@@ -8,6 +8,7 @@ import './styles/screen.css'
 import './styles/task.css'
 import './styles/modal.css'
 import './styles/input.css'
+import './styles/blog.css'
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';

@@ -8,6 +8,8 @@ import { taskCreateReducer, taskListReducer, taskUpdateReducer } from './reducer
 import { userListReducer } from './reducers/userReducer';
 import { categoryCreateReducer, categoryDeleteReducer, categoryListReducer } from './reducers/categoryReducer';
 import { ordersListReducer } from './reducers/ordersReducer';
+import blogReducer from './reducers/blogReducer';
+import productReducer from './reducers/productReducer';
 // import {
 //   categoryCreateReducer,
 //   categoryDeleteReducer,
@@ -18,25 +20,20 @@ import { ordersListReducer } from './reducers/ordersReducer';
 //   productDeleteReducer,
 //   productListReducer,
 // } from './reducers/productReducer.js';
-// import {
-//   computerCreateReducer,
-//   computerDeleteReducer,
-//   computerListReducer,
-//   computerReducer,
-// } from './reducers/computerReducer.js';
-// import {
-//   quotationCreateReducer,
-//   quotationDetailsReducer,
-//   quotationDeleteReducer,
-//   quotationListReducer,
-//   quotationReducer,
-// } from './reducers/quotationReducer.js';
-// import {
-//   taskCreateReducer,
-//   taskListReducer,
-//   taskUpdateReducer,
-// } from './reducers/taskReducer.js';
-// import { sellDeleteReducer, sellsCreateReducer, sellsListReducer } from './reducers/sellsReducer';
+import {
+  computerCreateReducer,
+  computerDeleteReducer,
+  computerListReducer,
+  computerReducer,
+} from './reducers/computerReducer.js';
+import {
+  quotationCreateReducer,
+  quotationDetailsReducer,
+  quotationDeleteReducer,
+  quotationListReducer,
+  quotationReducer,
+} from './reducers/quotationReducer.js';
+import { sellDeleteReducer, sellsCreateReducer, sellsListReducer } from './reducers/sellsReducer';
 
 const initialState = {
   adminSignin: {
@@ -44,19 +41,19 @@ const initialState = {
       ? JSON.parse(localStorage.getItem('adminInfo'))
       : null,
   },
-//   quotation: {
-//     items: localStorage.getItem('items')
-//       ? JSON.parse(localStorage.getItem('items'))
-//       : [],
-//     clientData: localStorage.getItem('clientData')
-//       ? JSON.parse(localStorage.getItem('clientData'))
-//       : {},
-//   },
-//   computer: {
-//     specs: localStorage.getItem('specs')
-//       ? JSON.parse(localStorage.getItem('specs'))
-//       : [],
-//   },
+  quotation: {
+    items: localStorage.getItem('items')
+      ? JSON.parse(localStorage.getItem('items'))
+      : [],
+    clientData: localStorage.getItem('clientData')
+      ? JSON.parse(localStorage.getItem('clientData'))
+      : {},
+  },
+  computer: {
+    specs: localStorage.getItem('specs')
+      ? JSON.parse(localStorage.getItem('specs'))
+      : [],
+  },
 };
 
 const reducer = combineReducers({
@@ -66,36 +63,37 @@ const reducer = combineReducers({
     noteCreate: noteCreateReducer,
     noteUpdate: noteUpdateReducer,
     hardwarePostList: hardwarePostListReducer,
-    taskList: taskListReducer,
-    taskCreate: taskCreateReducer,
-    taskUpdate: taskUpdateReducer,
     userList: userListReducer,
     adminList: adminListReducer,
     categoryList: categoryListReducer,
     categoryCreate: categoryCreateReducer,
     categoryDelete: categoryDeleteReducer,
     orderList: ordersListReducer,
+    hardwarePostCreate: blogReducer.createReducer,
+    productList: productReducer.listReducer,
+    productDelete: productReducer.deleteReducer,
+    productCreate: productReducer.createReducer,
     // categoryList: categoryListReducer,
     // categoryCreate: categoryCreateReducer,
     // categoryDelete: categoryDeleteReducer,
     // productList: productListReducer,
     // productCreate: productCreateReducer,
     // productDelete: productDeleteReducer,
-    // computer: computerReducer,
-    // computerList: computerListReducer,
-    // computerCreate: computerCreateReducer,
-    // computerDelete: computerDeleteReducer,
-    // quotation: quotationReducer,
-    // quotationCreate: quotationCreateReducer,
-    // quotationList: quotationListReducer,
-    // quotationDelete: quotationDeleteReducer,
-    // quotationDetails: quotationDetailsReducer,
-    // taskList: taskListReducer,
-    // taskCreate: taskCreateReducer,
-    // taskUpdate: taskUpdateReducer,
-    // sellsList: sellsListReducer,
-    // sellCreate: sellsCreateReducer,
-    // sellDelete: sellDeleteReducer
+    computer: computerReducer,
+    computerList: computerListReducer,
+    computerCreate: computerCreateReducer,
+    computerDelete: computerDeleteReducer,
+    quotation: quotationReducer,
+    quotationCreate: quotationCreateReducer,
+    quotationList: quotationListReducer,
+    quotationDelete: quotationDeleteReducer,
+    quotationDetails: quotationDetailsReducer,
+    taskList: taskListReducer,
+    taskCreate: taskCreateReducer,
+    taskUpdate: taskUpdateReducer,
+    sellsList: sellsListReducer,
+    sellCreate: sellsCreateReducer,
+    sellDelete: sellDeleteReducer
   });
   
   const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
