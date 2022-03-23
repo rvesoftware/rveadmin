@@ -47,3 +47,9 @@ export const signin = (username, password) => async (dispatch) => {
       });
     }
   };
+
+
+  export const signout = () => (dispatch) => {
+    localStorage.removeItem('adminInfo');
+    dispatch({type: ADMIN_SIGNOUT});
+}

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { signout } from '../actions/adminActions';
 import { toggle } from '../actions/generalActions';
 import '../styles/navigation.css';
 // import { signout } from '../actions/userActions';
@@ -20,7 +21,7 @@ export default function Navigation() {
   };
 
   const signoutHandler = () => {
-    // dispatch(signout());
+    dispatch(signout());
   };
 
   return (

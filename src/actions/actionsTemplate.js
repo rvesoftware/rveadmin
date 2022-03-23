@@ -59,9 +59,6 @@ export default class actionsTemplate {
              dispatch({type: this.DELETE_FAIL, payload: error.message && error.response.data.message? error.response.data.message : error.message, })
          }
      };
-
-    
-    
 }
 
 // import Axios from 'axios';
