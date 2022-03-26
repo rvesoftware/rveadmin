@@ -1,6 +1,6 @@
 import { applyMiddleware, combineReducers, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import { toggleMenu } from './reducers/generalReducer';
+import { reducerGeneral, toggleMenu } from './reducers/generalReducer';
 import { adminListReducer, adminSigninReducer } from './reducers/adminReducer.js';
 import { noteCreateReducer, noteListReducer, noteUpdateReducer } from './reducers/notesReducer';
 import { hardwarePostListReducer } from './reducers/hardwarePostReducer';
@@ -73,6 +73,7 @@ const reducer = combineReducers({
     productList: productReducer.listReducer,
     productDelete: productReducer.deleteReducer,
     productCreate: productReducer.createReducer,
+    generalReducer: reducerGeneral,
     // categoryList: categoryListReducer,
     // categoryCreate: categoryCreateReducer,
     // categoryDelete: categoryDeleteReducer,

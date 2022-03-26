@@ -8,13 +8,14 @@ import { Editor } from "react-draft-wysiwyg";
 import draftToHtml from "draftjs-to-html";
 import blogActions from "../actions/blogActions.js";
 import constantsTemplate from "../constants/constantsTemplate.js";
+import axios from "axios";
 
 export default function CreateHardwarePostScreen() {
   const adminSignin = useSelector((state) => state.adminSignin);
   const { adminInfo } = adminSignin;
 
   const hardwarePostCreate = useSelector((state) => state.hardwarePostCreate);
-  const {success: successCreate} = hardwarePostCreate;
+  const { success: successCreate } = hardwarePostCreate;
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -25,35 +26,67 @@ export default function CreateHardwarePostScreen() {
   const username = adminInfo.name;
   const userphoto = adminInfo.image;
 
-  
   const dispatch = useDispatch();
   const [editorState, setEditorState] = useState(() =>
     EditorState.createEmpty()
   );
 
   useEffect(() => {
-    if(successCreate){
+    if (successCreate) {
       const blogConstants = new constantsTemplate("BLOG");
-      dispatch({type: blogConstants.constants().CREATE_RESET})
+      dispatch({ type: blogConstants.constants().CREATE_RESET });
       setTitle("");
       setDescription("");
       setCategory("");
       setSanitizedHtml("");
-      setImage("");      
+      setImage("");
     }
   }, [dispatch, successCreate]);
 
-  
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(blogActions.create({title, description, image, sanitizedHtml, category, username, userphoto}))
-  }
+    dispatch(
+      blogActions.create({
+        title,
+        description,
+        image,
+        sanitizedHtml,
+        category,
+        username,
+        userphoto,
+      })
+    );
+  };
+
+  const uploadHandler = async (e, imageFIeld = "image") => {
+    const file = e.target.files[0];
+    const bodyFormData = new FormData();
+    bodyFormData.append("file", file);
+    try {
+      dispatch({ type: "UPLOAD_REQUEST" });
+      const { data } = await axios.post(
+        "https://rveapi.herokuapp.com/api/v1/users/upload",
+        bodyFormData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
+      dispatch({ type: "UPLOAD_SUCCESS" });
+      setImage(data.secure_url);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
-    <div>
+    <div className="form-post">
       <form>
-      <button className="btn-none mr-2">Clear All</button>
-        <button onClick={submitHandler} type="submit" className="btn">Create Post</button>
+        <button className="btn-none mr-2">Clear All</button>
+        <button onClick={submitHandler} type="submit" className="btn">
+          Create Post
+        </button>
 
         <div className="form-group-post">
           <input
@@ -79,7 +112,12 @@ export default function CreateHardwarePostScreen() {
             value={image}
             onChange={(e) => setImage(e.target.value)}
           /> */}
-          <input type="file" name="" id="" />
+          <input
+            type="file"
+            name="file"
+            id="file"
+            onChange={(e) => uploadHandler(e, "featuredImage")}
+          />
         </div>
         <div className="form-group-post">
           <input
@@ -93,9 +131,11 @@ export default function CreateHardwarePostScreen() {
         <Editor
           editorState={editorState}
           onEditorStateChange={setEditorState}
-          onChange={() => setSanitizedHtml(
-            draftToHtml(convertToRaw(editorState.getCurrentContent()))
-          )}
+          onChange={() =>
+            setSanitizedHtml(
+              draftToHtml(convertToRaw(editorState.getCurrentContent()))
+            )
+          }
         />
         {/* <textarea name="" id="" value={markdown} onChange={(e) => setMarkdown(e.target.value)} cols="30" placeholder="Text" rows="10"> */}
 

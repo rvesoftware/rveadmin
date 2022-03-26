@@ -94,3 +94,19 @@
     .aside-list{
       max-width: 350px;
     }
+
+    .form-post{
+      background-color: #fff;
+      min-height: 100vh;
+      padding: 1.5rem;
+    }
+
+
+    .form-post select{
+      color: #000;
+      outline: none;
+    }
+
+    .form-post input::placeholder{
+      color: rgba(0, 0, 0, .7);
+    }
