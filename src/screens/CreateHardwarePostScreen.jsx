@@ -9,13 +9,20 @@ import draftToHtml from "draftjs-to-html";
 import blogActions from "../actions/blogActions.js";
 import constantsTemplate from "../constants/constantsTemplate.js";
 import axios from "axios";
+import LoadingBox from '../components/LoadingBox'
 
 export default function CreateHardwarePostScreen() {
   const adminSignin = useSelector((state) => state.adminSignin);
   const { adminInfo } = adminSignin;
 
   const hardwarePostCreate = useSelector((state) => state.hardwarePostCreate);
-  const { success: successCreate } = hardwarePostCreate;
+  const { loading, success: successCreate } = hardwarePostCreate;
+
+
+  const generalReducer = useSelector((state) => state.generalReducer);
+  const { loading: loadingReducer } = generalReducer;
+
+  
 
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -82,6 +89,8 @@ export default function CreateHardwarePostScreen() {
 
   return (
     <div className="form-post">
+      {loading? <LoadingBox /> : (
+
       <form>
         <button className="btn-none mr-2">Clear All</button>
         <button onClick={submitHandler} type="submit" className="btn">
@@ -112,12 +121,18 @@ export default function CreateHardwarePostScreen() {
             value={image}
             onChange={(e) => setImage(e.target.value)}
           /> */}
+          {loadingReducer? <LoadingBox /> : (
+<>
           <input
             type="file"
             name="file"
             id="file"
             onChange={(e) => uploadHandler(e, "featuredImage")}
           />
+          <img className="img-preview" src={image} />
+          </>
+          )}
+
         </div>
         <div className="form-group-post">
           <input
@@ -141,6 +156,8 @@ export default function CreateHardwarePostScreen() {
 
         {/* </textarea> */}
       </form>
+      )}
+
     </div>
   );
 }
