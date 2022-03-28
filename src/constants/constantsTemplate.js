@@ -13,6 +13,16 @@ export default class constantsTemplate {
         const CREATE_SUCCESS = `${this.name}_CREATE_SUCCESS`;
         const CREATE_FAIL =    `${this.name}_CREATE_FAIL`;
         const CREATE_RESET =   `${this.name}_CREATE_RESET`;
+
+        const DETAILS_REQUEST = `${this.name}_DETAILS_REQUEST`;
+        const DETAILS_SUCCESS = `${this.name}_DETAILS_SUCCESS`;
+        const DETAILS_FAIL    = `${this.name}_DETAILS_FAIL`;
+        const DETAILS_RESET   = `${this.name}_DETAILS_RESET`;
+
+        const UPDATE_REQUEST = `${this.name}_UPDATE_REQUEST`;
+        const UPDATE_SUCCESS = `${this.name}_UPDATE_SUCCESS`;
+        const UPDATE_FAIL    = `${this.name}_UPDATE_FAIL`;
+        const UPDATE_RESET   = `${this.name}_UPDATE_RESET`;
                 
         const DELETE_REQUEST = `${this.name}_DELETE_REQUEST`;
         const DELETE_SUCCESS = `${this.name}_DELETE_SUCCESS`;
@@ -30,7 +40,15 @@ export default class constantsTemplate {
             DELETE_REQUEST,
             DELETE_SUCCESS,
             DELETE_FAIL,
-            DELETE_RESET
+            DELETE_RESET,
+            UPDATE_REQUEST,
+            UPDATE_SUCCESS,
+            UPDATE_FAIL,
+            UPDATE_RESET,
+            DETAILS_REQUEST,
+            DETAILS_SUCCESS,
+            DETAILS_FAIL,
+            DETAILS_RESET
         }
     }
     

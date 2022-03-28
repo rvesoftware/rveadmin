@@ -4,18 +4,35 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { listHardwarePosts } from "../actions/hardwarePostActions";
+import  blogActions  from "../actions/blogActions";
 import * as timeago from 'timeago.js';
+import constantsTemplate from "../constants/constantsTemplate";
+import { useNavigate } from "react-router-dom";
 
 export default function PostScreen() {
+  const navigate = useNavigate();
+
   const hardwarePostList = useSelector((state) => state.hardwarePostList);
   const { loading, posts } = hardwarePostList;
+
+  const hardwarePostDelete = useSelector((state) => state.hardwarePostDelete);
+  const { success } = hardwarePostDelete;
+
     const [search, setSearch] = useState('');
 
   const dispatch = useDispatch();
 
+
+  const deleteHandler = (element) => {
+    dispatch(blogActions.delete(element._id));
+  }
   useEffect(() => {
-    dispatch(listHardwarePosts());
-  }, [dispatch]);
+    if(success){
+      const blogConstants = new constantsTemplate("BLOG");
+      dispatch({ type: blogConstants.constants().DELETE_RESET });
+    }
+    dispatch( listHardwarePosts());
+  }, [dispatch, success]);
 
   console.log(posts)
   return (
@@ -54,7 +71,10 @@ export default function PostScreen() {
                         <th>{post.title}</th>
                         <th>{post.status}</th>
                         <th>{timeago.format(post.createdAt, 'en_US')}</th>
-                        <th>Actions</th>
+                        <th>
+                        <button className="btn-icon" onClick={() => navigate(`/hardwarePost/${post._id}`)}><i className='bx bxs-pencil' ></i></button>
+                          <button className="btn-icon" onClick={() => deleteHandler(post)}><i className='bx bxs-trash' ></i></button>
+                        </th>
                     </tr>
                 ))}
               </tbody>

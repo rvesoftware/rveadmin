@@ -18,10 +18,20 @@ export default class actionsTemplate {
         this.DELETE_FAIL = constants.DELETE_FAIL;
         this.DELETE_RESET = constants.DELETE_RESET;
 
+        this.UPDATE_REQUEST = constants.UPDATE_REQUEST;
+        this.UPDATE_SUCCESS = constants.UPDATE_SUCCESS;
+        this.UPDATE_FAIL    = constants.UPDATE_FAIL;
+        this.UPDATE_RESET   = constants.UPDATE_RESET;
+
+        this.DETAILS_REQUEST = constants.DETAILS_REQUEST;
+        this.DETAILS_SUCCESS = constants.DETAILS_SUCCESS;
+        this.DETAILS_FAIL    = constants.DETAILS_FAIL;
+        this.DETAILS_RESET   = constants.DETAILS_RESET;
+
         this.api = api;
 
-        this.URL = "https://rveapiv2.herokuapp.com"
-        // this.URL = "http://localhost:4200"
+        // this.URL = "https://rveapiv2.herokuapp.com"
+        this.URL = "http://localhost:4200"
 
     }
     
@@ -33,6 +43,18 @@ export default class actionsTemplate {
             console.log(data)
         }catch(err){
             dispatch({type: this.LIST_FAIL});
+            console.log(err)
+        }
+    }
+
+    one = (id) => async(dispatch) => {
+        dispatch({type: this.DETAILS_REQUEST, payload: id});
+        try{
+            const {data} = await Axios.get(`${this.URL}/api/v1/${this.api}/${id}`);
+            dispatch({type: this.DETAILS_SUCCESS, payload:data});
+            console.log(data)
+        }catch(err){
+            dispatch({type: this.DETAILS_FAIL});
             console.log(err)
         }
     }
@@ -49,6 +71,18 @@ export default class actionsTemplate {
         }
     };
 
+    update = (props) => async (dispatch, getState) => {
+        dispatch({ type: this.UPDATE_REQUEST, payload: { props } });
+    
+        try {
+          const { data } = await Axios.put(`${this.URL}/api/v1/${this.api}/${props._id}`, { props });
+          dispatch({ type: this.UPDATE_SUCCESS, payload: data });
+        } catch (err) {
+          console.log(err);
+          dispatch({ type: this.UPDATE_FAIL, payload: err });
+        }
+      };
+      
 
     delete = (id) => async(dispatch, getState) => {
          dispatch({type: this.DELETE_REQUEST, payload: id});

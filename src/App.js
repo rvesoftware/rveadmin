@@ -16,6 +16,7 @@ import OrdersScreen from "./screens/OrdersScreen";
 import CreateHardwarePostScreen from "./screens/CreateHardwarePostScreen";
 import ComputerScreen from "./screens/ComputerScreen";
 import QuotationScreen from "./screens/QuotationScreen";
+import EditHardwarePostScreen from "./screens/EditHardwarePostScreen";
 
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
             <Route path="/chat" element={<ChatScreen />} exact></Route>
             <Route path="/hardwarePosts" element={<PostScreen />} exact></Route>
             <Route path="/createHardwarePost" element={<CreateHardwarePostScreen />} exact></Route>
+            <Route path="/hardwarePost/:id" element={<EditHardwarePostScreen />} exact></Route>
             <Route path="/gamingusers" element={<GamingUsersScreen />} exact></Route>
             <Route path="/categories" element={<CategoriesScreen />} exact></Route>
             <Route path="/orders" element={<OrdersScreen />} exact></Route>

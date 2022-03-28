@@ -20,7 +20,7 @@ export const listHardwarePosts = () => async (dispatch, getState) => {
   
   try {
     const { data } = await Axios.get(
-      `http://localhost:4200/api/v1/hardwarePosts`
+      `https://rveapiv2.herokuapp.com/api/v1/hardwarePosts`
     );
 
     console.log(data);

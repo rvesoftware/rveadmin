@@ -665,3 +665,15 @@ textarea.form-control{
   background-color: transparent;
   color: #f2f6fa;
 }
+
+.form-post{
+  overflow: scroll !important;
+}
+
+.rdw-editor-main{
+  overflow-x: scroll !important;
+}
+
+.screen{
+  overflow-x: scroll;
+} 
