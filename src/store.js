@@ -34,6 +34,7 @@ import {
   quotationReducer,
 } from './reducers/quotationReducer.js';
 import { sellDeleteReducer, sellsCreateReducer, sellsListReducer } from './reducers/sellsReducer';
+import softwareBlogReducer from './reducers/softwarePostReducer';
 
 const initialState = {
   adminSignin: {
@@ -66,6 +67,10 @@ const reducer = combineReducers({
     hardwarePostDelete: blogReducer.deleteReducer,
     hardwarePostDetails: blogReducer.oneReducer,
     hardwarePostUpdate: blogReducer.updateReducer,
+    softwarePostList: softwareBlogReducer.listReducer,
+    softwarePostDelete: softwareBlogReducer.deleteReducer,
+    softwarePostDetails: softwareBlogReducer.oneReducer,
+    softwarePostUpdate: softwareBlogReducer.updateReducer,
     userList: userListReducer,
     adminList: adminListReducer,
     categoryList: categoryListReducer,
