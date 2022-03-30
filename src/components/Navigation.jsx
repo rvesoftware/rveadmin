@@ -2,27 +2,33 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { signout } from '../actions/adminActions';
-import { toggle } from '../actions/generalActions';
+import { toggleFunction } from '../actions/generalActions';
 import '../styles/navigation.css';
 // import { signout } from '../actions/userActions';
 
 export default function Navigation() {
+  const toggle = useSelector((state) => state.toggle)
+  const {isOpen} = toggle;
+
   const adminSignin = useSelector((state) => state.adminSignin);
   const { adminInfo } = adminSignin;
 
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(isOpen);
   const [active, setActive] = useState('home');
 
   const dispatch = useDispatch();
 
   const setOpenMenu = () => {
-    setIsOpen(!isOpen);
-    dispatch(toggle(isOpen));
+    console.log(isOpen)
+    setIsOpenMenu(!isOpen);
+    dispatch(toggleFunction(isOpenMenu));
   };
 
   const signoutHandler = () => {
     dispatch(signout());
   };
+
+ 
 
   return (
     <aside

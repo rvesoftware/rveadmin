@@ -30,8 +30,8 @@ export default class actionsTemplate {
 
         this.api = api;
 
-        // this.URL = "https://rveapiv2.herokuapp.com"
-        this.URL = "http://localhost:4200"
+        this.URL = "https://rveapiv2.herokuapp.com"
+        // this.URL = "http://localhost:4200"
 
     }
     

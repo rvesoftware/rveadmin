@@ -61,7 +61,6 @@ export default function HomeScreen() {
   const [taskSelected, setTaskSelected] = useState([]);
 
 
-
   return (
     <div>
       <div>
@@ -106,13 +105,7 @@ export default function HomeScreen() {
             <i className='bx bxl-blogger'></i>
           </div>
         )}
-        <div className="card"></div>
-        <div className="card"></div>
-        <div className="card"></div>
-      </div>
-
-      <div className="container__home">
-          <div>
+         <div>
           {loading ? (
         <h2>CARGANDO...</h2>
       ) : (
@@ -146,6 +139,10 @@ export default function HomeScreen() {
               </div>
       )}
           </div>
+      </div>
+
+      <div className="container__home">
+         
       </div>
     </div>
   );

@@ -1751,3 +1751,16 @@ time{
   font-size: 1.2rem !important;
   margin-top: .5rem;
 }
+
+.channel-list__container.active{
+  display: block;
+  width: 100%;
+}
+
+.app__wrapper.active{
+  display: block;
+}
+
+/* .channel-list__container{
+  height: 100%;
+} */

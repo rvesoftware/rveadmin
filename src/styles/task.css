@@ -1,5 +1,6 @@
 .task__container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -9,7 +10,7 @@
 .task__card{
     position: relative;
     background-color: var(--second-bg-dark);
-    width: 300px;
+    /* width: 300px; */
     min-height: 90vh;
     max-height: 90vh;
     padding: 1rem;
@@ -23,7 +24,8 @@
 
 .task__card.home-task{
     min-height: 400px;
-    width: 240px;
+    max-height: 400px;
+    /* width: 240px; */
     overflow: hidden;
     overflow-y: scroll;
 }

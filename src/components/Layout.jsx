@@ -12,7 +12,7 @@ export default function Layout({children}) {
         <>
             <Header />
             <Navigation />
-            <div className={isOpen? 'screen active' : 'screen'}>
+            <div className={isOpen? 'screen ' : 'screen active'}>
                 {children}
             </div>
             {/* <Footer /> */}
