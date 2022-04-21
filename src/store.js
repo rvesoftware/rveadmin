@@ -67,6 +67,7 @@ const reducer = combineReducers({
     hardwarePostDelete: blogReducer.deleteReducer,
     hardwarePostDetails: blogReducer.oneReducer,
     hardwarePostUpdate: blogReducer.updateReducer,
+    softwarePostCreate: softwareBlogReducer.createReducer,
     softwarePostList: softwareBlogReducer.listReducer,
     softwarePostDelete: softwareBlogReducer.deleteReducer,
     softwarePostDetails: softwareBlogReducer.oneReducer,

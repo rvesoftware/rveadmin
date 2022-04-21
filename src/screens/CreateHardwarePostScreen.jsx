@@ -22,8 +22,6 @@ export default function CreateHardwarePostScreen() {
   const generalReducer = useSelector((state) => state.generalReducer);
   const { loading: loadingReducer } = generalReducer;
 
-  
-
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [image, setImage] = useState("");

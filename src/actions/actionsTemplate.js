@@ -3,7 +3,7 @@ import constantsTemplate from '../constants/constantsTemplate.js'
 
 export default class actionsTemplate {
     
-    constructor(constants, api){
+    constructor(constants, api, newUrl){
         this.LIST_REQUEST = constants.LIST_REQUEST;
         this.LIST_SUCCESS = constants.LIST_SUCCESS;
         this.LIST_FAIL = constants.LIST_FAIL;
@@ -30,15 +30,29 @@ export default class actionsTemplate {
 
         this.api = api;
 
-        this.URL = "https://rveapiv2.herokuapp.com"
+        this.URL = newUrl? newUrl : "https://rveapiv2.herokuapp.com"
         // this.URL = "http://localhost:4200"
 
     }
-    
+
+    listNewUrl = () => async(dispatch, getState) => {
+        dispatch({type: this.LIST_REQUEST});
+        try{
+            const {data} = await Axios.get(`${this.URL}/${this.api}`);
+            console.log(data)
+            dispatch({type: this.LIST_SUCCESS, payload:data});
+            console.log(data)
+        }catch(err){
+            dispatch({type: this.LIST_FAIL});
+            console.log(err)
+        }
+    }
+
     list = () => async(dispatch, getState) => {
         dispatch({type: this.LIST_REQUEST});
         try{
-            const {data} = await Axios.get(`${this.URL}/api/v1/${this.api}/`);
+            console.log(this.URL)
+            const {data} = this.newUrl? await Axios.get(`${this.URL}/`) : await Axios.get(`${this.URL}/api/v1/${this.api}/`);
             dispatch({type: this.LIST_SUCCESS, payload:data});
             console.log(data)
         }catch(err){
@@ -58,6 +72,20 @@ export default class actionsTemplate {
             console.log(err)
         }
     }
+
+
+    createNewUrl = (props) => async(dispatch) => {
+        dispatch({type: this.CREATE_REQUEST, payload: props});
+        console.log(props)
+        try{
+            const {data} = await Axios.put(`${this.URL}/${this.api}`, props);
+            console.log(data)
+            dispatch({type: this.CREATE_SUCCESS, payload: data});
+        }catch(error){
+            const message = error.response && error.response.data.message ? error.response.data.message : error.message;
+            dispatch({type: this.CREATE_FAIL, payload: message});
+        }
+    };
 
     create = (props) => async(dispatch) => {
         dispatch({type: this.CREATE_REQUEST, payload: props});
@@ -83,6 +111,16 @@ export default class actionsTemplate {
         }
       };
       
+
+      deleteNewUrl = (id) => async(dispatch, getState) => {
+        dispatch({type: this.DELETE_REQUEST, payload: id});
+        try{
+            Axios.delete(`${this.URL}/${this.api}/${id}`);
+            dispatch({type: this.DELETE_SUCCESS})
+        }catch(error){
+            dispatch({type: this.DELETE_FAIL, payload: error.message && error.response.data.message? error.response.data.message : error.message, })
+        }
+    };
 
     delete = (id) => async(dispatch, getState) => {
          dispatch({type: this.DELETE_REQUEST, payload: id});

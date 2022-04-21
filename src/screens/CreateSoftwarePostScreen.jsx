@@ -6,7 +6,6 @@ import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import { EditorState, convertToRaw } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 import draftToHtml from "draftjs-to-html";
-import blogActions from "../actions/blogActions.js";
 import constantsTemplate from "../constants/constantsTemplate.js";
 import axios from "axios";
 import LoadingBox from '../components/LoadingBox'
@@ -16,8 +15,8 @@ export default function CreateSoftwarePostScreen() {
   const adminSignin = useSelector((state) => state.adminSignin);
   const { adminInfo } = adminSignin;
 
-  const hardwarePostCreate = useSelector((state) => state.hardwarePostCreate);
-  const { loading, success: successCreate } = hardwarePostCreate;
+  const softwarePostCreate = useSelector((state) => state.softwarePostCreate);
+  const { loading, success: successCreate } = softwarePostCreate;
 
 
   const generalReducer = useSelector((state) => state.generalReducer);
@@ -52,12 +51,12 @@ export default function CreateSoftwarePostScreen() {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(
-      softwareBlogActions.create({
+      softwareBlogActions.createNewUrl({
         title,
-        description,
-        image,
-        sanitizedHtml,
         category,
+        image,
+        description,
+        content: sanitizedHtml,
         username,
         userphoto,
       })
@@ -106,11 +105,11 @@ export default function CreateSoftwarePostScreen() {
         </div>
         <div className="form-group-post">
           <select name="" id="" onChange={(e) => setCategory(e.target.value)}>
-            <option value="Noticias">Noticias</option>
-            <option value="Reviews">Reviews</option>
-            <option value="Gaming">Gaming</option>
-            <option value="Software">Software</option>
-            <option value="Hardware">Hardware</option>
+            <option value="Automatizacion">Automatizacion</option>
+            <option value="Empresas">Empresas</option>
+            <option value="Marketing">Marketing</option>
+            <option value="UI/UX">UI/UX</option>
+            <option value="Desarrollo">Desarollo</option>
           </select>
         </div>
         <div className="form-group-post">

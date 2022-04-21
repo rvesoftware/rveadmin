@@ -17,6 +17,8 @@ import CreateHardwarePostScreen from "./screens/CreateHardwarePostScreen";
 import ComputerScreen from "./screens/ComputerScreen";
 import QuotationScreen from "./screens/QuotationScreen";
 import EditHardwarePostScreen from "./screens/EditHardwarePostScreen";
+import SoftwarePostScreen from "./screens/SoftwarePostScreen";
+import CreateSoftwarePostScreen from "./screens/CreateSoftwarePostScreen";
 
 
 function App() {
@@ -36,6 +38,10 @@ function App() {
             <Route path="/task" element={<TaskScreen />} exact></Route>
             <Route path="/chat" element={<ChatScreen />} exact></Route>
             <Route path="/hardwarePosts" element={<PostScreen />} exact></Route>
+            <Route path="/softwarePosts" element={<SoftwarePostScreen />} exact></Route>
+            
+            <Route path="/createSoftwarePost" element={<CreateSoftwarePostScreen />} exact></Route>
+            
             <Route path="/createHardwarePost" element={<CreateHardwarePostScreen />} exact></Route>
             <Route path="/hardwarePost/:id" element={<EditHardwarePostScreen />} exact></Route>
             <Route path="/gamingusers" element={<GamingUsersScreen />} exact></Route>
